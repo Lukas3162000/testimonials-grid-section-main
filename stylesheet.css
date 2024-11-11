@@ -13,19 +13,135 @@
     font-style: normal;
   }
 
+  /*Colors*/
+  :root{
+    --ModerateViolet: hsl(263,55%,52%);
+    --VeryDarkGrayishBlue: hsl(217,19%,35%);
+    --VeryDarkBlakishBlue: hsl(34,97%,64%);
+    --White: hsl(0,0%,100%);
+
+    --White70: hsl(0,0%,70%);
+    --white50: hsl(0,0%,50%);
+
+    --LightGray: hsl(0,0%,81%);
+    --LightGrayishBlue: hsl(210,46%,95%);
+  }
+
+  /*Deleting auto-spacings*/
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
   /*Styling*/
 html{
     color: red;
     font-family: "Barlow Semi Condensed";
     font-size: 13px;
     background-color: beige;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
 }
 
+/*Flex-boxing or Layouting*/
 .container{
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
+.row-1{
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+}
+
+.row-2{
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+}
+
+.column-1{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+
+  height: 100%;
+}
+
+.column-2{
+  background-color: red;
+
+  height: 100%;
+}
+
+/*Standard-Card*/
 .card{
     background-color: white;
+    padding-left: 2.46rem;
+    padding-right: 2.46rem;
+    padding-bottom: 2.46rem;
+    padding-top: 1.85rem;
+    /*Margin anpassen / individualisieren*/
+    margin: 5px;
+ 
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-profile{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.54rem;
+}
+
+.card h1{
+  margin-bottom: 1.54rem;
+}
+
+.card .quote{
+  margin-bottom: 1.54rem;
+}
+
+.profile-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.25rem;
+}
+
+.card-profile .small{
+  font-size: 0.85rem;
+}
+
+.card-profile img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 2px solid var(--ModerateViolet);
+  width: 2.16rem;
+}
+
+
+/*individual card settings*/
+.compact{
+  max-width: 19.7rem;
+  }
+
+.tall{
+  height: 50%;
+  max-width: 19.7rem;
+}
+  
+.wide{
+  max-width: 41.5rem;
 }
