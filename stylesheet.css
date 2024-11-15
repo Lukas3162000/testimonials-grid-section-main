@@ -34,7 +34,8 @@
   }
 
   /*Styling*/
-html{
+
+html, body{
     color: red;
     font-family: "Barlow Semi Condensed";
     font-size: 13px;
@@ -43,43 +44,36 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100svh;
-}
-
-/*Flex-boxing or Layouting*/
-.container{
-    display: flex;
-    flex-direction: row;
     height: 100%;
 }
 
-.row-1{
+/*Flex-boxing or Layouting*/
+
+.container{
   display: flex;
   flex-direction: row;
-
-  height: 100%;
-}
-
-.row-2{
-  display: flex;
-  flex-direction: row;
-
-  height: 100%;
+  gap: 1rem;
 }
 
 .column-1{
   display: flex;
   flex-direction: column;
-  background-color: black;
-
-  height: 100%;
+  gap: 1rem;
 }
-
 .column-2{
-  background-color: red;
-
-  height: 100%;
+display: flex;
+flex-direction: row;
 }
+.row-1{
+  display: flex;
+  gap: 1rem;
+}
+.row-2{
+  display: flex;
+  gap: 1rem;
+}
+
+
 
 /*Standard-Card*/
 .card{
@@ -88,9 +82,7 @@ html{
     padding-right: 2.46rem;
     padding-bottom: 2.46rem;
     padding-top: 1.85rem;
-    /*Margin anpassen / individualisieren*/
-    margin: 5px;
- 
+
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -108,6 +100,7 @@ html{
 
 .card .quote{
   margin-bottom: 1.54rem;
+
 }
 
 .profile-text{
@@ -138,7 +131,7 @@ html{
   }
 
 .tall{
-  height: 50%;
+  height: 100%;
   max-width: 19.7rem;
 }
   
