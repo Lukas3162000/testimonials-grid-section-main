@@ -49,7 +49,7 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
 /*Flex-boxing or Layouting*/
@@ -206,6 +206,9 @@ flex-direction: row;
 @media (max-width: 600px) {
   .container{
     flex-direction: column;
+    overflow: visible;
+    max-height: 100svh;
+    padding: 5.23rem;
   }
   .column-2{
     flex-direction: column;
