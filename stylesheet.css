@@ -16,12 +16,16 @@
   /*Colors*/
   :root{
     --ModerateViolet: hsl(263,55%,52%);
-    --VeryDarkGrayishBlue: hsl(217,19%,35%);
-    --VeryDarkBlakishBlue: hsl(34,97%,64%);
+    --VeryDarkBlakishBlue: hsl(219,29%,14%);
     --White: hsl(0,0%,100%);
 
-    --White70: hsl(0,0%,70%);
-    --white50: hsl(0,0%,50%);
+    --White70: hsla(0,0%,100%,0.7);
+    --white50: hsla(0,0%,100%,0.5);
+
+    --VeryDarkGrayishBlue: hsla(217,19%,35%,1);
+    --VeryDarkGrayishBlue50: hsla(217,19%,35%,0.7);
+    --VeryDarkGrayishBlue70: hsla(217,19%,35%,0.5);
+
 
     --LightGray: hsl(0,0%,81%);
     --LightGrayishBlue: hsl(210,46%,95%);
@@ -31,6 +35,7 @@
   *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   /*Styling*/
@@ -52,13 +57,13 @@ html, body{
 .container{
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2.46rem;
 }
 
 .column-1{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.85rem;
 }
 .column-2{
 display: flex;
@@ -66,11 +71,11 @@ flex-direction: row;
 }
 .row-1{
   display: flex;
-  gap: 1rem;
+  gap: 2.46rem;
 }
 .row-2{
   display: flex;
-  gap: 1rem;
+  gap: 2.46rem;
 }
 
 
@@ -82,8 +87,9 @@ flex-direction: row;
     padding-right: 2.46rem;
     padding-bottom: 2.46rem;
     padding-top: 1.85rem;
+    box-shadow: 5px 5px 15px hsla(0,0%,0%,0.2);
 
-    border-radius: 6px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
 }
@@ -92,15 +98,21 @@ flex-direction: row;
   display: flex;
   flex-direction: row;
   margin-bottom: 1.54rem;
+  z-index: 2;
 }
 
 .card h1{
   margin-bottom: 1.54rem;
+  font-size: 1.54rem;
+  font-weight: 600;
+  z-index: 2;
 }
 
 .card .quote{
   margin-bottom: 1.54rem;
-
+  font-size: 1rem;
+  line-height: 135%;
+  z-index: 2;
 }
 
 .profile-text{
@@ -112,6 +124,7 @@ flex-direction: row;
 
 .card-profile .small{
   font-size: 0.85rem;
+  
 }
 
 .card-profile img{
@@ -120,12 +133,14 @@ flex-direction: row;
   justify-content: center;
 
   border-radius: 50%;
-  border: 2px solid var(--ModerateViolet);
+  border: 2px solid var(--white50);
   width: 2.16rem;
 }
 
 
 /*individual card settings*/
+
+/*Card-sizing*/
 .compact{
   max-width: 19.7rem;
   }
@@ -137,4 +152,52 @@ flex-direction: row;
   
 .wide{
   max-width: 41.5rem;
+}
+
+/*Card-Styling*/
+
+/*Light*/
+.lightCard{
+  color: var(--VeryDarkGrayishBlue);
+  background-color: var(--White);
+}
+.lightQuote{
+  color: var(--VeryDarkGrayishBlue70);
+}
+.lightVeri{
+  color: var(--VeryDarkGrayishBlue50);
+}
+
+/*Dark*/
+.DarkCard{
+  color: var(--White);
+  background-color: black;
+}
+
+.DarkQuote{
+  color: var(--White70);
+}
+
+.DarkVeri{
+  color: var(--white50);
+}
+
+/*Individual Dark-Card*/
+#DanielCard{
+  background-color: var(--ModerateViolet);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 82% top;
+}
+
+#JonathanCard{
+  background-color: var(--VeryDarkGrayishBlue);
+}
+
+#PatrickCard{
+  background-color: var(--VeryDarkBlakishBlue);
+}
+
+#cardProfilePatrick{
+  border: 2px solid var(--ModerateViolet);
 }
