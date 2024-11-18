@@ -44,7 +44,7 @@ html, body{
     color: red;
     font-family: "Barlow Semi Condensed";
     font-size: 13px;
-    background-color: beige;
+    background-color: var(--LightGrayishBlue);
 
     display: flex;
     justify-content: center;
@@ -200,4 +200,34 @@ flex-direction: row;
 
 #cardProfilePatrick{
   border: 2px solid var(--ModerateViolet);
+}
+
+
+@media (max-width: 600px) {
+  .container{
+    flex-direction: column;
+  }
+  .column-2{
+    flex-direction: column;
+  }
+  .row-1{
+    flex-direction: column;
+  }
+
+  .row-2{
+    flex-direction: column;
+  }
+
+  .compact{
+    max-width: 19.7rem;
+    }
+  
+  .tall{
+    max-width: 19.7rem;
+  }
+    
+  .wide{
+    max-width: 19.7rem;
+  }
+  
 }
